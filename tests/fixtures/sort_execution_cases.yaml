@@ -1,0 +1,42 @@
+cases:
+  - name: copy_file_into_archive
+    config:
+      dry_run: true
+      move_files: false
+    input:
+      source_path: "D:/Photos/_unsorted/IMG_0001.jpg"
+      resolved_datetime: "2021-08-03T19:11:44"
+      canonical_name: "2021-08-03_19-11-44_exif.jpg"
+    expected:
+      target_dir: "D:/Photos/2021/08_August"
+      target_path: "D:/Photos/2021/08_August/2021-08-03_19-11-44_exif.jpg"
+      action: "copy"
+      performed: false
+
+  - name: move_file_when_enabled
+    config:
+      dry_run: false
+      move_files: true
+    input:
+      source_path: "D:/Photos/_unsorted/IMG_0002.jpg"
+      resolved_datetime: "2019-12-01T00:00:00"
+      canonical_name: "2019-12-01_00-00-00_filename.jpg"
+    expected:
+      target_dir: "D:/Photos/2019/12_Dezember"
+      target_path: "D:/Photos/2019/12_Dezember/2019-12-01_00-00-00_filename.jpg"
+      action: "move"
+      performed: true
+
+  - name: skip_if_target_exists
+    config:
+      dry_run: false
+      move_files: false
+    input:
+      source_path: "D:/Photos/_unsorted/IMG_0003.jpg"
+      resolved_datetime: "2020-01-01T00:00:01"
+      canonical_name: "2020-01-01_00-00-01_exif.jpg"
+      target_exists: true
+    expected:
+      action: "skip"
+      reason: "target_exists"
+      performed: false
