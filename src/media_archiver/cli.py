@@ -4,14 +4,14 @@ from datetime import datetime
 import sys
 from pathlib import Path
 
-from photo_tool.config import load_config, ConfigError, AppConfig
-from photo_tool.datetime_resolver import resolve_datetime
-from photo_tool.executor import execute_decision
-from photo_tool.month_normalizer import normalize_month_folder
-from photo_tool.renamer import ensure_unique_name, generate_filename
-from photo_tool.reporter import ExecutionResult, ReportConfig, build_report, write_reports
-from photo_tool.scanner import scan_directories
-from photo_tool.sorter import SortDecision, build_sort_decision
+from media_archiver.config import load_config, ConfigError, AppConfig
+from media_archiver.datetime_resolver import resolve_datetime
+from media_archiver.executor import execute_decision
+from media_archiver.month_normalizer import normalize_month_folder
+from media_archiver.renamer import ensure_unique_name, generate_filename
+from media_archiver.reporter import ExecutionResult, ReportConfig, build_report, write_reports
+from media_archiver.scanner import scan_directories
+from media_archiver.sorter import SortDecision, build_sort_decision
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

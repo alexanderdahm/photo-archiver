@@ -1,8 +1,8 @@
 from datetime import datetime
 from pathlib import Path
 
-from photo_tool.deduplicator import find_duplicates
-from photo_tool.scanner import FileInfo
+from media_archiver.deduplicator import find_duplicates
+from media_archiver.scanner import FileInfo
 
 
 def _make_file_info(path: Path) -> FileInfo:
@@ -79,7 +79,7 @@ def test_find_duplicates_handles_hash_errors(tmp_path: Path, monkeypatch):
     def fake_hash(_path):
         return None
 
-    monkeypatch.setattr("photo_tool.deduplicator._hash_file", fake_hash)
+    monkeypatch.setattr("media_archiver.deduplicator._hash_file", fake_hash)
 
     groups = find_duplicates(files=files, resolved_datetimes=resolved_datetimes)
     assert groups == []

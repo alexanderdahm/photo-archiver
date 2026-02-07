@@ -3,7 +3,7 @@ from pathlib import Path
 
 import yaml
 
-from photo_tool.sorter import build_sort_decision
+from media_archiver.sorter import build_sort_decision
 
 
 def test_sort_execution_cases():

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from photo_tool.scanner import scan_directories
+from media_archiver.scanner import scan_directories
 
 
 def test_scanner_handles_stat_error(monkeypatch, tmp_path: Path):

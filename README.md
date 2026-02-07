@@ -1,4 +1,4 @@
-# Photo Archive Tool
+# Media Archiver
 
 Deterministic, offline-only tooling to organize photo and video archives by
 capture date on Windows. The project emphasizes safety, auditability, and
@@ -71,12 +71,12 @@ pip install -e .[dev]
 
 ## Usage
 
-After installing the project, the CLI is available as `photo-tool`.
+After installing the project, the CLI is available as `media-archiver`.
 
 ### Dry-Run (default, recommended)
 
 ```powershell
-photo-tool --config config.yaml
+media-archiver --config config.yaml
 ```
 
 This will scan, analyze, and report all actions without modifying any files.
@@ -84,7 +84,7 @@ This will scan, analyze, and report all actions without modifying any files.
 ### Apply changes
 
 ```powershell
-photo-tool --config config.yaml --apply
+media-archiver --config config.yaml --apply
 ```
 
 Changes are only applied if:
@@ -101,7 +101,7 @@ Changes are only applied if:
 During development, the CLI can also be invoked via:
 
 ```powershell
-python -m photo_tool.cli --config config.yaml
+python -m media_archiver.cli --config config.yaml
 ```
 
 Both commands execute the same code path.
@@ -156,7 +156,7 @@ Dry-run runs the same logic but never writes files; it only generates reports.
 - [PLAN.md](PLAN.md) — strict development order
 - [CONTRIBUTING.md](CONTRIBUTING.md) — contribution and safety rules
 - [tests](tests) — unit tests and fixtures
-- [src/photo_tool](src/photo_tool) — implementation
+- [src/media_archiver](src/media_archiver) — implementation
 
 These documents are binding.
 

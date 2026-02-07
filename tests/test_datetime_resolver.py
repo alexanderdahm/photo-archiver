@@ -2,7 +2,7 @@ from pathlib import Path
 
 import yaml
 
-from photo_tool.datetime_resolver import resolve_datetime
+from media_archiver.datetime_resolver import resolve_datetime
 
 
 def test_datetime_resolution_cases():

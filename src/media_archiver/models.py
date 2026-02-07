@@ -1,4 +1,4 @@
-"""Data models used by photo_tool."""
+"""Data models used by media_archiver."""
 
 from dataclasses import dataclass
 from datetime import datetime

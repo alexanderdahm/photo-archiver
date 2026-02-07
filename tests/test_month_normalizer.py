@@ -2,7 +2,7 @@ from pathlib import Path
 
 import yaml
 
-from photo_tool.month_normalizer import normalize_month_folder
+from media_archiver.month_normalizer import normalize_month_folder
 
 
 def test_month_folder_cases():

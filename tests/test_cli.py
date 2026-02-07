@@ -1,4 +1,4 @@
-from photo_tool.cli import parse_args
+from media_archiver.cli import parse_args
 
 
 def test_parse_args_requires_config():

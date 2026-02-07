@@ -1,7 +1,7 @@
 from datetime import datetime
 from pathlib import Path
 
-from photo_tool.reporter import (
+from media_archiver.reporter import (
     ExecutionResult,
     ReportConfig,
     build_report,
@@ -9,7 +9,7 @@ from photo_tool.reporter import (
     to_json,
     to_markdown,
 )
-from photo_tool.sorter import SortDecision
+from media_archiver.sorter import SortDecision
 
 
 def _make_decision(source: str, target: str, action: str, reason: str | None):

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from photo_tool.cli import main
+from media_archiver.cli import main
 
 
 def test_cli_dry_run_creates_full_report(tmp_path: Path):

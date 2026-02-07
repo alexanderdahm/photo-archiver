@@ -1,4 +1,4 @@
-"""photo_tool package"""
+"""media_archiver package"""
 
 __version__ = "0.1.0"
 

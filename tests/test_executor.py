@@ -3,8 +3,8 @@ from unittest.mock import patch
 
 import yaml
 
-from photo_tool.executor import execute_decision
-from photo_tool.sorter import SortDecision
+from media_archiver.executor import execute_decision
+from media_archiver.sorter import SortDecision
 
 
 def test_executor_respects_apply():

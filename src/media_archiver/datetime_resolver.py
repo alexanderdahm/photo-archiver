@@ -4,7 +4,7 @@ from datetime import datetime
 import re
 from typing import Any
 
-from photo_tool.models import ConfidenceLevel, DateTimeResolution, DateTimeSource
+from media_archiver.models import ConfidenceLevel, DateTimeResolution, DateTimeSource
 
 
 _PATTERN_WHATSAPP = re.compile(r"^IMG-(\d{8})-WA\d+", re.IGNORECASE)

@@ -26,7 +26,7 @@ It is explicitly structured for AI-assisted development (e.g. Microsoft Copilot)
 
 # Plan
 
-Kurzplan für Implementierung, Tests und Release der Photo-Archiver-Toolchain.
+Kurzplan für Implementierung, Tests und Release der Media-Archiver-Toolchain.
 
 ## Purpose
 
@@ -45,7 +45,7 @@ Umbenennen und Berichtigen von Foto- und Videobibliotheken auf Windows.
 
 - Setup
   - Provide `pyproject.toml`, example config and docs.
-  - Create package skeleton under `src/photo_tool`.
+  - Create package skeleton under `src/media_archiver`.
 
 - Core implementation
   - Implement `scanner.py`, `datetime_resolver.py`, `renamer.py`,
@@ -68,13 +68,13 @@ Umbenennen und Berichtigen von Foto- und Videobibliotheken auf Windows.
 Dry-run (default):
 
 ```powershell
-photo-tool run --config config.yaml
+media-archiver --config config.yaml
 ```
 
 Apply changes:
 
 ```powershell
-photo-tool run --config config.yaml --apply
+media-archiver --config config.yaml --apply
 ```
 
 ## Configuration

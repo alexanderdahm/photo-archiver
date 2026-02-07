@@ -1,7 +1,7 @@
 from pathlib import Path
 import pytest
 
-from photo_tool.config import load_config, ConfigError
+from media_archiver.config import load_config, ConfigError
 
 
 def test_load_valid_config(tmp_path: Path):

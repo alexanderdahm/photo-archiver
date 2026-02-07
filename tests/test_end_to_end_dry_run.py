@@ -1,13 +1,13 @@
 from datetime import datetime
 from pathlib import Path
 
-from photo_tool.datetime_resolver import resolve_datetime
-from photo_tool.executor import execute_decision
-from photo_tool.month_normalizer import normalize_month_folder
-from photo_tool.renamer import generate_filename
-from photo_tool.reporter import ExecutionResult, ReportConfig, build_report, write_reports
-from photo_tool.sorter import build_sort_decision
-from photo_tool.models import DateTimeSource
+from media_archiver.datetime_resolver import resolve_datetime
+from media_archiver.executor import execute_decision
+from media_archiver.month_normalizer import normalize_month_folder
+from media_archiver.renamer import generate_filename
+from media_archiver.reporter import ExecutionResult, ReportConfig, build_report, write_reports
+from media_archiver.sorter import build_sort_decision
+from media_archiver.models import DateTimeSource
 
 
 _MONTH_NAME_BY_NUMBER = {

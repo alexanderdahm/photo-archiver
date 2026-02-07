@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
-from photo_tool.models import DateTimeSource
+from media_archiver.models import DateTimeSource
 
 
 def _format_base_name(

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from photo_tool.cli import main
+from media_archiver.cli import main
 
 
 def test_cli_apply_cleans_empty_unsorted_dirs(tmp_path: Path):

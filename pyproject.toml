@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "photo-archive-tool"
+name = "media-archiver"
 version = "0.1.0"
 description = "Deterministic, offline-only photo and video archive organizer"
 readme = "README.md"
@@ -20,7 +20,7 @@ dependencies = [
 dev = ["pytest>=7.4", "pytest-cov>=4.1"]
 
 [project.scripts]
-photo-tool = "photo_tool.cli:main"
+media-archiver = "media_archiver.cli:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -28,7 +28,7 @@ addopts = "-ra"
 
 [tool.coverage.run]
 branch = true
-source = ["photo_tool"]
+source = ["media_archiver"]
 
 [tool.coverage.report]
 show_missing = true

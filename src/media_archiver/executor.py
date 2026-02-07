@@ -7,7 +7,7 @@ Performs copy/move operations based on SortDecision.
 import shutil
 from pathlib import Path
 
-from photo_tool.sorter import SortDecision
+from media_archiver.sorter import SortDecision
 
 
 def execute_decision(

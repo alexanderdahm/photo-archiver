@@ -3,8 +3,8 @@ from pathlib import Path
 
 import yaml
 
-from photo_tool.models import DateTimeSource
-from photo_tool.renamer import ensure_unique_name, generate_filename
+from media_archiver.models import DateTimeSource
+from media_archiver.renamer import ensure_unique_name, generate_filename
 
 
 def _parse_base_filename(base: str) -> datetime:

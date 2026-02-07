@@ -1,7 +1,7 @@
 from pathlib import Path
 from unittest.mock import patch
 
-from photo_tool.scanner import scan_directories
+from media_archiver.scanner import scan_directories
 
 
 class _FakeStat:

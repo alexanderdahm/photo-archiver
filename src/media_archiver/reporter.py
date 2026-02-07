@@ -7,7 +7,7 @@ from pathlib import Path
 import json
 from typing import Iterable, List
 
-from photo_tool.sorter import SortDecision
+from media_archiver.sorter import SortDecision
 
 
 @dataclass(frozen=True)

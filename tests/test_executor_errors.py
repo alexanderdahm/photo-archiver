@@ -1,8 +1,8 @@
 import shutil
 from pathlib import Path
 
-from photo_tool.executor import execute_decision
-from photo_tool.sorter import SortDecision
+from media_archiver.executor import execute_decision
+from media_archiver.sorter import SortDecision
 
 
 def test_executor_copy_io_error_is_handled(monkeypatch, tmp_path: Path):

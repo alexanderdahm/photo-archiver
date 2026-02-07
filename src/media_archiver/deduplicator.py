@@ -8,7 +8,7 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
-from photo_tool.scanner import FileInfo
+from media_archiver.scanner import FileInfo
 
 
 @dataclass(frozen=True)
