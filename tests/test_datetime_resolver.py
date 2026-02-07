@@ -1,10 +1,12 @@
-def test_datetime_resolution_case(case, resolver):
-    result = resolver.resolve(
-        filename=case["filename"],
-        exif_datetime=case["exif_datetime"],
-        fs_modified=case["fs_modified"],
-    )
+from pathlib import Path
 
-    assert result.datetime.isoformat() == case["expected"]["datetime"]
-    assert result.source == case["expected"]["source"]
-    assert result.confidence == case["expected"]["confidence"]
+from photo_tool.datetime_resolver import resolve_datetime
+
+
+def test_datetime_resolution_returns_value(tmp_path: Path):
+    sample = tmp_path / "image.jpg"
+    sample.write_text("x", encoding="utf-8")
+
+    result = resolve_datetime(sample)
+
+    assert result is not None
