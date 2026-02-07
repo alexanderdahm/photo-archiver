@@ -1,0 +1,48 @@
+# Datetime resolution test cases
+# Used to validate deterministic behavior of datetime_resolver
+
+cases:
+  - name: exif_preferred_over_filename
+    filename: "IMG-20170526-WA0009.jpg"
+    exif_datetime: "2017-05-26T14:32:10"
+    fs_modified: "2017-05-26T15:00:00"
+    expected:
+      datetime: "2017-05-26T14:32:10"
+      source: "exif"
+      confidence: "high"
+
+  - name: filename_used_when_no_exif
+    filename: "VID_20210914_203344.mp4"
+    exif_datetime: null
+    fs_modified: "2021-09-15T10:00:00"
+    expected:
+      datetime: "2021-09-14T20:33:44"
+      source: "filename"
+      confidence: "medium"
+
+  - name: fs_time_fallback
+    filename: "CIMG5563.JPG"
+    exif_datetime: null
+    fs_modified: "2018-03-10T11:22:33"
+    expected:
+      datetime: "2018-03-10T11:22:33"
+      source: "filesystem"
+      confidence: "low"
+
+  - name: ambiguous_filename_no_date
+    filename: "image_final.jpg"
+    exif_datetime: null
+    fs_modified: "2020-01-01T00:00:00"
+    expected:
+      datetime: "2020-01-01T00:00:00"
+      source: "filesystem"
+      confidence: "low"
+
+  - name: whatsapp_android_format
+    filename: "IMG-20201231-WA0012.jpg"
+    exif_datetime: null
+    fs_modified: "2021-01-01T09:00:00"
+    expected:
+      datetime: "2020-12-31T00:00:00"
+      source: "filename"
+      confidence: "medium"

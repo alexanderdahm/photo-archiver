@@ -1,0 +1,18 @@
+cases:
+  - input: "Januar"
+    expected: "01_Januar"
+
+  - input: "01 Januar"
+    expected: "01_Januar"
+
+  - input: "01Januar"
+    expected: "01_Januar"
+
+  - input: "1-januar"
+    expected: "01_Januar"
+
+  - input: "Februar 2021"
+    expected: "02_Februar"
+
+  - input: "foo"
+    expected: null

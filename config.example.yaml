@@ -1,7 +1,17 @@
-# Example configuration for photo-archiver
-source_dirs:
-  - ./photos
-destination: ./sorted
-date_sources:
-  - exif
-  - filename
+paths:
+  archive_root: "D:/Photos"
+  unsorted: "D:/Photos/_unsorted"
+  report_output: "D:/Photos/_reports"
+
+behavior:
+  dry_run: true
+  move_files: false
+  normalize_month_folders: true
+
+naming:
+  month_format: "MM_Month"
+  filename_format: "YYYY-MM-DD_HH-mm-ss"
+
+duplicates:
+  detect: true
+  mode: "report-only"

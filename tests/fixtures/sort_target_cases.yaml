@@ -1,0 +1,6 @@
+cases:
+  - datetime: "2021-08-03T19:11:44"
+    expected_path: "2021/08_August"
+
+  - datetime: "2019-12-01T00:00:00"
+    expected_path: "2019/12_Dezember"

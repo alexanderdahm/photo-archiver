@@ -1,11 +1,34 @@
-[tool.poetry]
-name = "photo-archiver"
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photo-archive-tool"
 version = "0.1.0"
-description = "Photo organization and deduplication tool"
-authors = ["Your Name <you@example.com>"]
+description = "Deterministic, offline-only photo and video archive organizer"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Private" }
+authors = [{ name = "Project Owner" }]
 
-[tool.poetry.dependencies]
-python = "^3.10"
+dependencies = [
+    "PyYAML>=6.0",
+    "Pillow>=10.0", # EXIF extraction
+]
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.0"
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.scripts]
+photo-tool = "photo_tool.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["photo_tool"]
+
+[tool.coverage.report]
+show_missing = true
