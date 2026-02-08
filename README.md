@@ -4,6 +4,36 @@ Deterministic, offline-only tooling to organize photo and video archives by
 capture date on Windows. The project emphasizes safety, auditability, and
 reproducibility and follows a strict, phase-based architecture.
 
+## Example File Structure (Before/After)
+
+Before (unsorted, mixed filenames):
+
+```
+archive_root/
+   unsorted/
+      IMG_0031.JPG
+      Urlaub_Italien_2023-07-12_173055.jpeg
+      2022-11-05 08.22.10.mov
+      VID_0007.MP4
+      Screenshot_2021-01-03_12-11-09.png
+```
+
+After (sorted by capture date):
+
+```
+archive_root/
+   2021/
+      01_Januar/
+         2021-01-03_12-11-09.png
+   2022/
+      11_November/
+         2022-11-05_08-22-10.mov
+   2023/
+      07_Juli/
+         2023-07-12_17-30-55.jpeg
+         2023-07-12_17-30-55_01.jpg
+```
+
 ## What This Tool Does
 
 - Normalizes inconsistent year/month folder structures
