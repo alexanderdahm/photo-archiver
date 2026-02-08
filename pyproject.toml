@@ -26,6 +26,10 @@ media-archiver = "media_archiver.cli:main"
 testpaths = ["tests"]
 addopts = "-ra"
 
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["media_archiver"]
+
 [tool.coverage.run]
 branch = true
 source = ["media_archiver"]
