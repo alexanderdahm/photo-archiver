@@ -54,7 +54,7 @@ python -m venv .venv
 2. Activate it
 
 ```powershell
-.venv\Scripts\activate
+del
 ```
 
 3. Install the project (including CLI)
