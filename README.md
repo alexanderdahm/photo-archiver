@@ -224,7 +224,6 @@ These documents are binding.
 ## Development Rules (Important)
 
 - Follow [ARCHITECTURE.md](ARCHITECTURE.md) strictly
-- Follow the order in [PLAN.md](PLAN.md)
 - No filesystem writes outside approved phases
 - All logic must be unit-tested
 - All behavior must be deterministic
